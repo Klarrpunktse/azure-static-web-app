@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Azure Static Web App</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 3rem;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 0.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 300;
+      }
+
+      .card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+      }
+
+      .card h2 {
+        color: #4a5568;
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+      }
+
+      .card p {
+        color: #666;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .feature:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.05);
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature h3 {
+        color: #4a5568;
+        margin-bottom: 0.5rem;
+      }
+
+      .feature p {
+        color: #666;
+        font-size: 0.9rem;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 0.8rem 2rem;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      footer {
+        text-align: center;
+        padding: 2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Welcome to My Website</h1>
+        <p class="subtitle">Hosted on Azure Static Web Apps</p>
+      </header>
+
+      <main>
+        <div class="card">
+          <h2>🚀 About This Site</h2>
+          <p>
+            This is a simple, responsive website built with HTML and CSS,
+            deployed using Azure Static Web Apps. It demonstrates modern web
+            design principles with a clean, professional look.
+          </p>
+          <a href="#features" class="button">Explore Features</a>
+        </div>
+
+        <div id="features" class="features">
+          <div class="feature">
+            <div class="feature-icon">⚡</div>
+            <h3>Fast Loading</h3>
+            <p>Optimized for speed with minimal code and efficient CSS</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">📱</div>
+            <h3>Responsive Design</h3>
+            <p>Looks great on desktop, tablet, and mobile devices</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">☁️</div>
+            <h3>Cloud Hosted</h3>
+            <p>Powered by Azure Static Web Apps for reliable hosting</p>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🎨</div>
+            <h3>Modern Design</h3>
+            <p>Clean, professional appearance with smooth animations</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>🎓 Perfect for Students</h2>
+          <p>
+            This template is ideal for students learning web development or
+            showcasing projects. It's simple enough to understand but
+            sophisticated enough to impress.
+          </p>
+          <p>
+            <strong>Technologies used:</strong> HTML5, CSS3, Flexbox, Grid, and
+            CSS animations
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 My Azure Website. Built with ❤️ for learning.</p>
+      </footer>
+    </div>
+  </body>
+</html>
